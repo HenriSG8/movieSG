@@ -18,8 +18,7 @@ export class UserService {
             const passwordHashed = await bcrypt.hash(userDto.password, saltOrRounds);
 
             const payload = {
-                username: userDto.username,
-                email: userDto.email
+                email: userDto.email,
             }
 
             const token = jwt.sign(payload, authConfig.jwtSecret)

@@ -12,6 +12,7 @@ export class UserController {
     async registerUser(@Body() userDto: UserDto): Promise<User> {
         try {
             return this.userService.registerUser(userDto);
+            
         } catch (error) {
             throw new HttpException('Error in user register', HttpStatus.BAD_REQUEST)
         }
