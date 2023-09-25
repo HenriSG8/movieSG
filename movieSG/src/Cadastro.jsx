@@ -2,6 +2,9 @@ import { useState } from "react";
 
 import {Link} from 'react-router-dom'
 
+
+
+
 export default function Cadastro(){
 
     const [email, setEmail] = useState('')
@@ -11,7 +14,7 @@ export default function Cadastro(){
     function handleregi(e){
         e.preventDefault();
         
-        if(email !== "" && password !== ""){
+        if(email !== '' && password !== '' ){
 
             alert("teste")
         }else{
@@ -24,6 +27,11 @@ export default function Cadastro(){
     return(
 
         <div className="Login-conteiner">
+
+    
+                    <header> </header>    
+
+            
 
             <h1> Cadastre-se</h1>
 

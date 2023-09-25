@@ -1,10 +1,16 @@
-
-
+import Navbar from './Navbar'
+import '../src/css/Home.css'
 
 export default function Home(){
 return(
 
-<div> <h1>  olaaaa </h1> </div>
+<div> 
+
+
+
+
+
+</div>
 
 
 
