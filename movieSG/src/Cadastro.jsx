@@ -49,7 +49,7 @@ export default function Cadastro(){
 
                 <input
                 type="text"
-                placeholder="Digite seu email"
+                placeholder="Digite   seu email"
                 volue={email}
                 onAbort={(e) => setEmail(e.target.value) } 
                 />

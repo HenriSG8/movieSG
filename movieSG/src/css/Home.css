@@ -1,8 +1,7 @@
-header {
-    padding: 30px;
-    background-color: rgb(20, 112, 112);
-    height: 40px;
-  }
+
+
+
+
 
 .sidenav {
     width: 180px;
@@ -10,11 +9,11 @@ header {
     position: absolute;
     height: 50vh;
     padding: 0 30px;
-    left: -100%;
+    left: -100;
     transition: all 1s;
   }
 
-  .sidenav.active {
+  .sidenav.active{
 
     left: 0;
 

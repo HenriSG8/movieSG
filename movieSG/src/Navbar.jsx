@@ -12,9 +12,10 @@ const Navbar = () => {
 
         
 
-        <header>  dfdf  </header>
+        <header>     <img src={logo} alt="Logo" className="logo"/>
+  </header>
         
-        <img src={logo} alt="Logo" className="logo"/>
+        
 
         <ul>
         
