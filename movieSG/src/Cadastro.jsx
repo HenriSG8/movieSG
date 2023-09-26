@@ -41,7 +41,7 @@ export default function Cadastro(){
     
     return(
         <div className="Login-conteiner">
-            <header> </header>    
+             
             <h1> Cadastre-se</h1>
             <form  className="form" onSubmit={handleSubmit} >
                 <input
