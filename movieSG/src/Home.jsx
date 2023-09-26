@@ -1,5 +1,8 @@
 import React, { useEffect  ,useState } from "react";
 import api from "./services/api";
+import {Link} from 'react-router-dom';
+import './css/Home2.css';
+
 
 //URL da api :/movie/now_playing?api_key=7fbee966dcca15e34a84ff539e33c11b&languege=pt-BR
 
@@ -17,30 +20,16 @@ export default function Home() {
                     api_key:"7fbee966dcca15e34a84ff539e33c11b",
                     language: "pt-BR",
                     page:1 ,
-
                 }
-
-
             })
-
 
    //console.log(response.data.results.slice(0,10));
    setfilmes(response.data.results.slice(0,10))
-
         }
-
         loadFilmes();
-
-
-
   },[])
 
-  
-  
-  
-  
-  
-    return (
+        return (
         <div className="container"  >
 
         <div className="lista-filmes" >  
@@ -50,6 +39,11 @@ export default function Home() {
                         <article key={filme.id} >
 
                         <strong> {filme.title}  </strong>
+
+                            <img src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`}  alt={filme.title} />
+
+                            <Link  to={`/filme/${filme.id}`}  > Acessar </Link>
+
 
                         </article>
                     )
