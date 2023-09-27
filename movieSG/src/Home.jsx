@@ -9,52 +9,93 @@ import './css/Home2.css';
 
 export default function Home() {
   
-  const [filmes, setfilmes] = useState([]);
+  const [filmes, setfilmes ] = useState([]);
+  const [filmes2, setfilmes2] = useState([]);
 
-  useEffect(()=>{
-
-        async function loadFilmes(){
-
-            const response = await api.get("movie/now_playing", {
-                params:{
-                    api_key:"7fbee966dcca15e34a84ff539e33c11b",
-                    language: "pt-BR",
-                    page:1 ,
-                }
-            })
-
-   //console.log(response.data.results.slice(0,10));
-   setfilmes(response.data.results.slice(0,10))
-        }
-        loadFilmes();
-  },[])
-
-        return (
-        <div className="container"  >
-
-        <div className="lista-filmes" >  
-            {filmes.map((filme) => {
-
-                    return(
-                        <article key={filme.id} >
-
-                        <strong> {filme.title}  </strong>
-
-                            <img src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`}  alt={filme.title} />
-
-                            <Link  to={`/filme/${filme.id}`}  > Acessar </Link>
+  useEffect(() => {
+    async function loadFilmes() {
+      const response = await api.get("movie/now_playing", {
+        params: {
+          api_key: "7fbee966dcca15e34a84ff539e33c11b",
+          language: "pt-BR",
+          page: 1,
+        },
+      });
+  
+      setfilmes(response.data.results.slice(8, 12));
+    }
+  
+    async function loadFilmes2() {
+      const response = await api.get("movie/popular", {
+        params: {
+          api_key: "7fbee966dcca15e34a84ff539e33c11b",
+          language: "pt-BR",
+          page: 2, // Página 2 (ou outra página) para carregar mais filmes
+        },
+      });
+  
+      setfilmes2(response.data.results.slice(0, 4)); // Ou a quantidade desejada de filmes
+    }
+  
+    loadFilmes();
+    loadFilmes2(); // Carrega filmes para container2
+  }, []);
 
 
-                        </article>
-                    )
 
 
-            })}
-        
-         </div>
-            
-            
-        </div>
+    
+  
+  
+  return (
+            <div className="container">
+
+<h1 className="name-categori"> Destaques </h1>
+  <div className="lista-filmes">
+    {filmes.map((filme) => (
+      <article key={filme.id} className="filme-item">
+        <strong className="title-filme" >{filme.title}</strong>
+        <img
+          src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`}
+          alt={filme.title}
+        />
+        <Link to={`/filme/${filme.id}`} className="acessar-link">
+          Acessar
+        </Link>
+      </article>
+    ))}
+  </div>
+
+
+  <div className="container2">
+  
+        <h1 className="name-categori">Filmes Populares </h1>
+  
+  <div className="lista-filmes">
+    {filmes2.map((filme) => (
+      <article key={filme.id} className="filme-item">
+        <strong className="title-filme">{filme.title}</strong>
+        <img
+          src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`}
+          alt={filme.title}
+        />
+        <Link to={`/filme/${filme.id}`} className="acessar-link">
+          Acessar
+        </Link>
+      </article>
+    ))}
+  </div>
+</div>
+
+
+
+            </div>
+
+       
+
+
+
+
     );
 }
 
