@@ -4,6 +4,8 @@ import {Link} from 'react-router-dom';
 import './css/Home2.css';
 
 
+
+
 //URL da api :/movie/now_playing?api_key=7fbee966dcca15e34a84ff539e33c11b&languege=pt-BR
 
 
@@ -22,7 +24,7 @@ export default function Home() {
         },
       });
   
-      setfilmes(response.data.results.slice(8, 12));
+      setfilmes(response.data.results.slice(8,12 ));
     }
   
     async function loadFilmes2() {
@@ -34,7 +36,7 @@ export default function Home() {
         },
       });
   
-      setfilmes2(response.data.results.slice(0, 4)); // Ou a quantidade desejada de filmes
+      setfilmes2(response.data.results.slice(0, 8)); // Ou a quantidade desejada de filmes
     }
   
     loadFilmes();
@@ -51,15 +53,18 @@ export default function Home() {
             <div className="container">
 
 <h1 className="name-categori"> Destaques </h1>
-  <div className="lista-filmes">
+    
+    <div className="lista-filmes">
     {filmes.map((filme) => (
       <article key={filme.id} className="filme-item">
-        <strong className="title-filme" >{filme.title}</strong>
+        
+        
+         <div className="titulos"> <strong className="title-filme" >{filme.title}</strong> </div>   
         <img
           src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`}
           alt={filme.title}
         />
-        <Link to={`/filme/${filme.id}`} className="acessar-link">
+        <Link to={`/Filmee/${filme.id}`} className="acessar-link">
           Acessar
         </Link>
       </article>
@@ -74,14 +79,20 @@ export default function Home() {
   <div className="lista-filmes">
     {filmes2.map((filme) => (
       <article key={filme.id} className="filme-item">
-        <strong className="title-filme">{filme.title}</strong>
-        <img
+      
+      <div  className="titulos" > <strong className="title-filme">{filme.title}</strong> </div>  
+       
+       
+        <div className="imgFilme">  <img className="imgt"
           src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`}
           alt={filme.title}
         />
-        <Link to={`/filme/${filme.id}`} className="acessar-link">
+        </div>
+        
+        
+        <div className="acessar"> <Link to={`/Filmee/${filme.id}`} className="acessar-link">
           Acessar
-        </Link>
+        </Link>  </div>  
       </article>
     ))}
   </div>

@@ -24,6 +24,7 @@ const Navbar = () => {
           <li><a href="/Login">Login</a></li>
           <li><a href="/Cadastro">Cadastro</a></li>
           <li><a href="/">Filmes_Favoritos</a></li>
+          <li><a href="/Filmee">tes</a></li>
         </ul>
       </nav>
     </header>
