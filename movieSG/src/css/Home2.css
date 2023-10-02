@@ -1,116 +1,184 @@
-
-
+/* Estilos para o container principal */
 .container {
-    margin: 20px; /* Margem externa ao redor do container */
-    padding: 20px; /* Espaçamento interno (margem interna) para o conteúdo dentro do container */
-    background-color: #ffffff; /* Cor de fundo do container (ajuste conforme necessário) */
-  }
+  margin: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+}
 
-  .container2 {
-    margin: 20px; /* Margem externa ao redor do container */
-    padding: 0px; /* Espaçamento interno (margem interna) para o conteúdo dentro do container */
-    background-color: #f8f8f8; /* Cor de fundo do container (ajuste conforme necessário) */
-  }
+/* Estilos para o segundo container */
+.container2 {
+  margin: 20px;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
 
+/* Estilos para a lista de filmes */
 .lista-filmes {
-    display: flex; /* Torna os elementos filhos flexíveis */
-    flex-wrap: wrap; /* Quebra para a próxima linha quando não couberem na largura */
-    justify-content:center;
-    gap: 80px; /* Distribui o espaço entre os elementos */
-     /* Espaço entre os elementos (pode ser ajustado conforme necessário) */
-  }
-  
-  .filme-item {
-    flex: 0 1 calc(30% - 200px); /* Define a largura desejada para cada item (ajuste conforme necessário) */
-    text-align: center;
-    border-radius: 40px;
-    background-color: rgb(255, 255, 255);
-  }
-  
-  .filme-item img {
-    max-width: 85%; /* Garante que a imagem não ultrapasse o tamanho do contêiner pai */
-  }
-  .acessar-link {
-    display: block;
-    text-align: center;
-    margin-top: 10px; /* Adicione margem superior conforme necessário */
-    text-decoration: none;
-    color: #007bff; /* Cor do link (ajuste conforme necessário) */
-  }
-  
-  .title-filme{
-       
-      font-size: 20px;
-    
-
-  }
-
-  .lista-filmes a {
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 0;
-    font-size: 20px;
-    background-color:rgb(41, 121, 121);
-    margin: 5px;
-    border-radius: 70px;
-    color: white;
-  }
-  
-  
-  
-.name-categori{
-display: flex;
-text-align:center;
-justify-content:center;
-margin: 20px;
-margin-left: 170px;
-margin-right: 170px;
-margin-top: 50px;
-font-size: 40px;
-background-color: #ffffff;
-border-radius: 10;
-
-
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 49px;
 }
 
-.titulos{
-
-    background-color:rgb(41, 121, 121);
-    width: 350px;
-    max-width: 350px;
-    border-radius: 70px;
-
+/* Estilos para cada item de filme */
+.filme-item {
+  flex: 0 1 calc(30% - 150px); /* Acomoda 5 itens por linha */
+  text-align: center;
+  border-radius: 15px;
 }
 
-.acessar{
-
-    width: 100%;
-    background-color: #d0ff00; 
-    
-
-
+/* Estilos para as imagens de filme */
+.filme-item img {
+  max-width: 70%;
+  border: 3px solid #007bff; /* Cor da borda e largura personalizadas */
+  border-radius: 15px; /* Cantos arredondados para a imagem */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  background-color: #007bff;
 }
 
-
-    .imgFilme {
-        max-width: 100%; /* Garante que as imagens não ultrapassem a largura da div */
-        height: 470px; /* Mantém a proporção original da imagem */
-        display: block; /* Remove qualquer espaço extra abaixo das imagens */
-    
-       
-    
-    background-color:rgb(41, 121, 121);
-   
-
+/* Estilos para os links de acesso */
+.acessar-link {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #007bff;
 }
 
-.imgt{
-
-    width: 298px;
-    right: 446px;
-
+/* Estilos para o título do filme */
+.title-filme {
+  font-size: 20px;
 }
 
+/* Estilos para os links dentro da lista de filmes */
+.lista-filmes a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0;
+  font-size: 20px;
+  background-color: rgb(41, 121, 121);
+  margin: 5px;
+  border-radius: 70px;
+  color: white;
+}
+
+/* Estilos para o nome da categoria */
+.name-categori {
+  text-align: center; /* Centraliza o texto horizontalmente */
+  margin: 20px;
+  margin-top: 50px;
+  font-size: 36px; /* Tamanho de fonte maior */
+  font-weight: bold;
+  background-color: #f7f7f7;
+  padding: 15px;
+  border: 2px solid #007bff; /* Borda mais destacada */
+  border-radius: 15px;
+}
+
+/* Estilos para os títulos */
+.titulos {
+  width: 389px;
+  max-width: 100%;
+  border-radius: 70px;
+}
+
+/* Estilos para o botão de acesso */
+.acessar {
+  width: 100%;
+}
+
+/* Estilos para as imagens de filme */
+.imgFilme {
+  max-width: 100%;
+  height: auto; /* Alterado para altura automática para manter a proporção da imagem */
+  display: block;
+  background-color: #e0e0e0; /* Cinza elegante que combina com azul */
+  border-radius: 15px; /* Cantos arredondados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+@media (max-width: 70px) {
+  .imgFilme {
+    max-height: 30px; /* Altura máxima para telas menores */
+  }
+}
+
+/* Estilos adicionais para telas ainda menores (exemplo: smartphones) */
+@media (max-width: 48px) {
+  .imgFilme {
+    max-height: 20px; /* Altura máxima para telas muito pequenas */
+  }
+}
+
+.imgFilme2 {
+  max-width: 100%;
+  height: auto; /* Alterado para altura automática para manter a proporção da imagem */
+  display: block;
+  background-color: #e0e0e0; /* Cinza elegante que combina com azul */
+  border-radius: 15px; /* Cantos arredondados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.imgFilme3 {
+  max-width: 100%;
+  height: auto; /* Alterado para altura automática para manter a proporção da imagem */
+  display: block;
+  background-color: #e0e0e0; /* Cinza elegante que combina com azul */
+  border-radius: 15px; /* Cantos arredondados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+/* Estilos adicionais para .imgt */
+.imgt {
+  width: 298px;
+  right: 446px;
+}
+
+.img2 {
+  height: 408px;
+  width: 272px;
+}
+
+.img3 {
+  height: 408px;
+  width: 272px;
+}
+
+.img1 {
+  height: 408px;
+  width: 272px;
+}
+
+/* Estilos para o modo escuro */
+body.dark .container,
+
+body.dark .container2,
+body.dark .filme-item,
+body.dark .filme-item img,
+body.dark .acessar-link,
+body.dark .lista-filmes a,
+body.dark .name-categori,
+body.dark .titulos,
+body.dark .acessar,
+body.dark .imgFilme,
+body.dark .imgFilme2,
+body.dark .imgFilme3,
+body.dark .imgt,
+body.dark .img2,
+body.dark .img3,
+body.dark .img1 {
+  background-color: #333; /* Cor de fundo escura */
+  color: #fff; /* Cor do texto clara */
+}
+
+body.dark .lista-filmes a {
+  background-color: #007bff; /* Cor de fundo para links em modo escuro */
+  color: white; /* Cor do texto para links em modo escuro */
+}
+
+/* DarkMode.css */
+body.dark {
+  background-color: #333; /* Cor de fundo escura */
+  color: #fff; /* Cor do texto clara */
+}

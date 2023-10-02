@@ -1,0 +1,50 @@
+/* Estilize o botão de alternância de modo escuro como um interruptor */
+.switch {
+    display: inline-block;
+    position:relative;
+    width: 60px;
+    height: 34px;
+    left: 200px;
+
+  }
+  
+  /* Oculte o botão de alternância padrão (input) */
+  .switch input {
+    display: none;
+    
+
+  }
+  
+  /* Estilize o controle deslizante redondo */
+  .switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 1000px;
+    transition: 0.2s;
+  }
+  
+  /* Estilize o controle deslizante redondo quando o modo escuro está ativado */
+  .switch input:checked + .slider {
+    background-color: #007bff;
+  }
+  
+  /* Estilize o círculo interno para os ícones */
+  .switch .slider:before {
+    content: "☀️"; /* Emoji do sol */
+    position: absolute;
+    transform: translateX(32px);
+    line-height: 34px;
+    font-size: 18px;
+  }
+  
+  /* Estilize o círculo interno para os ícones quando o modo escuro está ativado */
+  .switch input:checked + .slider:before {
+    content: "🌙"; /* Emoji da lua */
+    transform: translateX(5px);
+  }
+  

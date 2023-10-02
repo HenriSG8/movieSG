@@ -1,0 +1,93 @@
+.meus-filmes {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.meus-filmes h1 {
+  margin-bottom: 30px;
+}
+
+.meus-filmes span {
+  font-size: 28px; /* Reduz o tamanho da fonte */
+  text-align: center; /* Alinha o texto no centro */
+ 
+
+}
+
+.meus-filmes ul {
+  background-color: #e0e0e0;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 800px;
+  list-style-type: none;
+  padding: 20px; /* Reduz o espaçamento interno */
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.meus-filmes ul li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.link {
+  color: black;
+}
+
+.meus-filmes div {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.meus-filmes div a {
+  text-decoration: none;
+  color: rgb(111, 202, 202);
+  margin-right: 14px;
+}
+
+.bntfav {
+  border: 5px solid #007bff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+/* Estilos para o modo escuro */
+body.dark .meus-filmes,
+body.dark .meus-filmes h1,
+body.dark .meus-filmes span,
+body.dark .meus-filmes ul,
+body.dark .meus-filmes ul li,
+body.dark .link,
+body.dark .meus-filmes div,
+body.dark .meus-filmes div a,
+body.dark .bntfav {
+  background-color: #333; /* Cor de fundo escura */
+  color: #fff; /* Cor do texto clara */
+}
+
+.titulo {
+  text-align: center; /* Centraliza o texto horizontalmente */
+  margin: 20px;
+  margin-top: 50px;
+  font-size: 36px; /* Tamanho de fonte maior */
+  font-weight: bold;
+  background-color: #f7f7f7;
+  padding: 15px;
+  border: 2px solid #007bff; /* Borda mais destacada */
+  border-radius: 15px;
+}
+
+.imgf {
+    height: 200px;
+    width: 140px;
+  }
+

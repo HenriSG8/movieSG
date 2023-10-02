@@ -1,0 +1,92 @@
+/* Seu código CSS original sem suporte a modo escuro */
+.filme-info {
+  margin: 0 auto;
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  padding: 0 8px;
+  background-color: #e0e0e0;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.filme-info h1 {
+  margin: 14px 0;
+}
+
+.filme-info img {
+  border-radius: 8px;
+  width: 800px;
+  max-width: 100%;
+  max-height: 340px;
+  object-fit: cover;
+}
+
+.filme-info h3 {
+  margin-top: 14px;
+  font-size: 35px;
+}
+
+.filme-info span {
+  margin: 8px 0;
+  font-size: 18px;
+  background-color: #e0e0e0;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.filme-info strong {
+  font-size: 18px;
+}
+
+.area-buttons button,
+.area-buttons button2 {
+  margin-right: 12px;
+  margin-top: 14px;
+  margin-left: 0;
+  font-size: 20px;
+  border: 0;
+  outline: none;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.area-buttons button:hover,
+.area-buttons button2:hover {
+  background-color: brown;
+  color: #FFF;
+}
+
+.area-buttons .bnt2:hover {
+  background-color: rgb(42, 165, 73);
+  color: #FFF;
+}
+
+.area-buttons a {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.5s;
+}
+
+.area-buttons a:hover {
+  color: #FFF;
+}
+
+/* Estilos para o modo escuro */
+body.dark .filme-info,
+body.dark .filme-info h1,
+body.dark .filme-info img,
+body.dark .filme-info h3,
+body.dark .filme-info span,
+body.dark .filme-info strong,
+body.dark .area-buttons button,
+body.dark .area-buttons button2,
+
+body.dark .area-buttons a,
+body.dark .area-buttons a:hover {
+  background-color: #333; /* Cor de fundo escura */
+  color: #fff; /* Cor do texto clara */
+}

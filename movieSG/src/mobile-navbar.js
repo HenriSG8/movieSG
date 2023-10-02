@@ -1,3 +1,5 @@
+import { setDriver } from "mongoose";
+
 class MobileNavbar {
   constructor(mobileMenu, navList) {
     this.mobileMenu = document.querySelector(mobileMenu);
@@ -28,3 +30,4 @@ const mobileNavbar = new MobileNavbar(
   ".nav-list"
 );
 mobileNavbar.init();
+

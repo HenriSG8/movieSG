@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 header{
 background: blue;
 height: 70px;
@@ -20,7 +20,7 @@ height: 70px;
   }
   
   .logo {
-    font-size: 125px;
+    font-size: 88px;
     text-transform: uppercase;
     letter-spacing: 4px;
   }
@@ -43,6 +43,7 @@ height: 70px;
   .nav-list {
     list-style: none;
     display: flex;
+
   }
   
   .nav-list li {
@@ -115,4 +116,7 @@ height: 70px;
   .mobile-menu.active .line3 {
     transform: rotate(45deg) translate(-5px, -7px);
   }
+
+
+
 
