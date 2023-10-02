@@ -6,10 +6,6 @@ import "../src/css/DarkMode.css";
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!isMobileMenuOpen);
-  };
-
   const handletoggled = () => {
     document.body.classList.toggle("dark");
     const isDark = document.body.classList.contains("dark");
@@ -23,21 +19,19 @@ const Navbar = () => {
     }
   }, []);
 
+  const handleHamburgerClick = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
-    <header>
-      <nav>
-        <a className="logo" href="/">
-          <img src={logo} alt="Logo" width="200" />
-        </a>
-        <div className={`mobile-menu ${isMobileMenuOpen ? "active" : ""}`} onClick={toggleMobileMenu}>
-          <div className="line1"></div>
-          <div className="line2"></div>
-          <div className="line3"></div>
-        </div>
-        <ul className={`nav-list ${isMobileMenuOpen ? "active" : ""}`}>
+    <header className="header">
+      <nav className={`nav ${isMobileMenuOpen ? "active" : ""}`}>
+        <a href="/" className="logo"> <img src={logo} alt="Logo" width="200" /> </a>
+        <button className="hamburger" onClick={handleHamburgerClick}></button>
+        <ul className="nav-list">
           <li><a href="/Login" className="log1">Login</a></li>
           <li><a href="/Cadastro">Cadastro</a></li>
-          <li><a href="/Favoritos">Filmes_Favoritos</a></li>
+          <li><a href="/Favoritos">Filmes Favoritos</a></li>
           <div className="modo-dark">
             <label className="switch">
               <input type="checkbox" onClick={handletoggled} />

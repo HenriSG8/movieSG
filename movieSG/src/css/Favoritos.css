@@ -33,10 +33,28 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 14px;
+  padding: 15px;
+  border: 2px solid #007bff; /* Borda mais destacada */
+  border-radius: 15px;
+
 }
 
 .link {
-  color: black;
+  
+  width: 70px;
+  max-width: 100%;
+  border-radius: 70px;
+  
+
+  border: 15px solid #007bff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  margin: 60px;
+
+
 }
 
 .meus-filmes div {
@@ -45,19 +63,16 @@
   text-align: center;
 }
 
-.meus-filmes div a {
-  text-decoration: none;
-  color: rgb(111, 202, 202);
-  margin-right: 14px;
-}
+
 
 .bntfav {
-  border: 5px solid #007bff;
+  border: 15px solid #007bff;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-color: #007bff;
   color: white;
   cursor: pointer;
+  
 }
 
 /* Estilos para o modo escuro */
@@ -66,10 +81,7 @@ body.dark .meus-filmes h1,
 body.dark .meus-filmes span,
 body.dark .meus-filmes ul,
 body.dark .meus-filmes ul li,
-body.dark .link,
-body.dark .meus-filmes div,
-body.dark .meus-filmes div a,
-body.dark .bntfav {
+body.dark .meus-filmes div {
   background-color: #333; /* Cor de fundo escura */
   color: #fff; /* Cor do texto clara */
 }

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import {  useParams , useNavigate   } from 'react-router-dom'
 import api from "./services/api";
 import '../src/css/filmee-info.css'
+import { toast } from 'react-toastify'
 
 function Filmee() {
     const {id} = useParams();
@@ -57,13 +58,16 @@ function Filmee() {
    const hasFilme = filmeSalvos.some( (filmeSalvo) => filmeSalvo.id === filme.id)
 
    if(hasFilme){
-    alert("ja ta la mlk")
+    toast.warn("O FILME JÁ ESTA SALVO")
+    
+    
+    
     return;
    }
 
    filmeSalvos.push(filme);
    localStorage.setItem("@movieSG", JSON.stringify(filmeSalvos));
-   alert("ja ta la")
+   toast.success("FILME SALVO COM SUCESSO!")
 
 
   }
@@ -84,7 +88,7 @@ function Filmee() {
 
     return (
       <div className='filme-info' >
-        <h1> {filme.title} </h1>
+        <h1 className='titlei'> {filme.title} </h1>
       <img src={`https://image.tmdb.org/t/p/original/${filme.backdrop_path}`} alt={filme.title} />
         <h3>  Sinopse </h3>
         <span> {filme.overview}  </span>
@@ -96,7 +100,7 @@ function Filmee() {
         
           <button  onClick={salvarFilme} className='bnt2' > Salvar </button>
 
-          <button  >
+          <button className='bnt3' >
 
           <a target='blank' rel='external' href={ `https://www.youtube.com/results?search_query= ${filme.title} Trailer `  } > 
             Trailer

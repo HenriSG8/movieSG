@@ -10,7 +10,15 @@
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+.titlei{
 
+  background-color: #f7f7f7;
+  padding: 15px;
+  border: 2px solid #007bff; /* Borda mais destacada */
+  border-radius: 15px;
+
+
+}
 .filme-info h1 {
   margin: 14px 0;
 }
@@ -54,15 +62,23 @@
   transition: all 0.5s;
 }
 
-.area-buttons button:hover,
-.area-buttons button2:hover {
+
+.area-buttons .bnt3:hover {
   background-color: brown;
   color: #FFF;
+  padding: 15px;
+  border: 2px solid #007bff; /* Borda mais destacada */
+  border-radius: 15px;
+
 }
 
 .area-buttons .bnt2:hover {
   background-color: rgb(42, 165, 73);
   color: #FFF;
+  padding: 15px;
+  border: 2px solid #007bff; /* Borda mais destacada */
+  border-radius: 15px;
+
 }
 
 .area-buttons a {
@@ -82,11 +98,31 @@ body.dark .filme-info img,
 body.dark .filme-info h3,
 body.dark .filme-info span,
 body.dark .filme-info strong,
-body.dark .area-buttons button,
-body.dark .area-buttons button2,
-
-body.dark .area-buttons a,
-body.dark .area-buttons a:hover {
+body.dark .area-buttons button2 {
+  
   background-color: #333; /* Cor de fundo escura */
   color: #fff; /* Cor do texto clara */
 }
+
+
+body.dark .area-buttons button:hover,
+body.dark .area-buttons button2:hover  {
+  background-color: brown;
+  color: #ffffff;
+  padding: 15px;
+  border: 2px solid #007bff; /* Borda mais destacada */
+  border-radius: 15px;
+
+}
+
+
+body.dark .area-buttons .bnt2:hover {
+  background-color: rgb(42, 165, 73);
+  color: #FFF;
+  padding: 15px;
+  border: 2px solid #007bff; /* Borda mais destacada */
+  border-radius: 15px;
+
+}
+
+

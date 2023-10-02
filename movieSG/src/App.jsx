@@ -2,8 +2,8 @@ import { useState } from 'react'
 import RoutesApp from './routes';
 import './css/App.css'
 import './css/Home.css'
-
-
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
     <div>
 
     
-    
+    <ToastContainer autoClose={3000} />
 
     <RoutesApp/>
     </div>
