@@ -72,3 +72,9 @@ background-repeat: no-repeat;
 
 
 }
+
+body.dark .Button-link{
+color: white;
+
+
+}

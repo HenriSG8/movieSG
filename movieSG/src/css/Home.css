@@ -23,7 +23,7 @@ height: 70px;
 }
 
 .logo {
-  font-size: 88px;
+  
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -40,10 +40,13 @@ height: 70px;
   
   font-size: 18px;
   color: #fff;
-  padding-block: 16px;
+  
 
 
 }
+
+
+
 
 .hero {
   height: calc(100vh - 70px);
