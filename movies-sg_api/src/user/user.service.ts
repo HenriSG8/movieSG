@@ -1,12 +1,11 @@
 import { Repository } from "typeorm";
 import { User } from "./entities/user.entity";
-import { ConflictException, Inject, Injectable, InternalServerErrorException } from "@nestjs/common";
+import { ConflictException, Inject, Injectable, InternalServerErrorException, UnauthorizedException, BadRequestException  } from "@nestjs/common";
 import { UserDto } from "./dtos/user.dto";
-import * as jwt from 'jsonwebtoken';
 import * as bcrypt from 'bcrypt';
-import authConfig from "src/auth.config";
+import authConfig from "./auth.config";
 import { InjectRepository } from "@nestjs/typeorm";
-
+import * as jwt from 'jsonwebtoken';
 @Injectable()
 export class UserService {
 
@@ -33,6 +32,38 @@ export class UserService {
             }
             throw new InternalServerErrorException('Error in user register')
         }
-        
     }
+
+    async signIn(email: string, password: string): Promise<any> {
+        try {
+            // Find user by username
+            const user = await this.userRepository.findOne({ where: { email: email } });
+
+            if (!user) {
+                return undefined; // User not found
+            }
+
+            const isPasswordValid = await bcrypt.compare(password, user.password);
+            if (!isPasswordValid) {
+                throw new UnauthorizedException('Invalid credentials');
+            }
+
+            if(!user.userToken) {
+                throw new UnauthorizedException('Token not found');
+            }
+
+            return user.userToken;
+        } catch (error) {
+            throw new UnauthorizedException('Invalid credentials');
+        }
+    }
+
+    async findOne(email: string): Promise<User | undefined> {
+        try {
+            return this.userRepository.findOne({ where: { email } });
+        } catch (error) {
+            throw new InternalServerErrorException('Error getting user by username')
+        }
+    }
+
 }

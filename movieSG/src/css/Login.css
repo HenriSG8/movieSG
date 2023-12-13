@@ -1,4 +1,4 @@
-.Login-conteiner{
+.Login-conteiner, .Login_mainDiv{
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -9,14 +9,14 @@ width: 100%;
 
 
 
-.Login-conteiner h1{
+.Login-conteiner, .container h1{
 
 font-size: 35px;
 
 
 }
 
-.form{
+.form, .mb-4{
 
 display: flex;
 flex-direction: column;
@@ -24,7 +24,7 @@ width: 90%;
 max-width: 600px;
 }
 
-.form input{
+.form , .mb-4 input{
 
 border: 50;
 
